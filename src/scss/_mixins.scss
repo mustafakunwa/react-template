@@ -1,0 +1,87 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      //600 px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      //900 px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      //1800 px
+      @content;
+    }
+  }
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin text($fsize, $fweight, $lheight, $color) {
+  color: $color;
+  font-size: $fsize;
+  font-weight: $fweight;
+  line-height: $lheight;
+}
+
+@mixin btnShadow {
+  background: #c4c4c4;
+  box-shadow: 2px 6px 15px rgba(31, 76, 94, 0.07);
+}
+@mixin cardShadow {
+  background: #c4c4c4;
+  box-shadow: 2px 6px 30px rgba(31, 76, 94, 0.1);
+}
+
+@mixin cardShadow-2 {
+  background: #c4c4c4;
+  box-shadow: 0px 23px 25px rgba(33, 64, 78, 0.0705882);
+}
+
+@mixin cardShadow-2 {
+  background: #c4c4c4;
+  box-shadow: 20.9077px 20.0965px 69px rgba(76, 76, 115, 0.07);
+}
+
+@mixin cta-shadow-primary {
+  background: #c4c4c4;
+  box-shadow: 3px 3px 0px $color-blue-sec;
+}
+
+@mixin cta-shadow-tertiary {
+  background: #c4c4c4;
+  box-shadow: 3px 3px 0px $color-blue-sec;
+}
+
+@mixin cta-shadow-disabled {
+  background: #c4c4c4;
+  box-shadow: 3px 3px 0px #b9b9b9;
+}
+
+@mixin mainShadow {
+  background: #c4c4c4;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.0509804);
+}

@@ -1,0 +1,23 @@
+h1 {
+  @include text(38px, 700, 44px, $color-white);
+}
+
+h2 {
+  @include text(28px, 700, 35px, $color-white);
+}
+
+h3 {
+  @include text(21px, 700, 35px, $color-white);
+}
+
+h4 {
+  @include text(18px, 700, 21px, $color-white);
+}
+
+h5 {
+  @include text(16px, 600, 19px, $color-white);
+}
+
+h6 {
+  @include text(14px, 600, 14px, $color-white);
+}
